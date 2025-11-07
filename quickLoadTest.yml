@@ -1,0 +1,22 @@
+config:
+  target: https://www.playwright.dev/
+  # Enable the Playwright engine:
+  engines:
+    playwright: {}
+  processor: "tests/getStarted.spec.js"
+  phases:
+  - name: warm_up
+    duration: 1        # seconds
+    arrivalRate: 5
+
+  - name: load
+    duration: 2       # seconds steady state
+    arrivalRate: 20
+
+  - name: ramp_down
+    duration: 1        # last cooldown
+    arrivalRate: 5
+scenarios:
+  - engine: playwright
+    flowFunction: "quickTestFlow"
+    flow: []
