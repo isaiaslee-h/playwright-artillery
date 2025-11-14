@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "test": "playwright test",
+  "load": "artillery run load.yml"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
