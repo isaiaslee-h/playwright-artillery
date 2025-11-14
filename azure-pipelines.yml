@@ -20,7 +20,7 @@ steps:
     displayName: 'Install dependencies'
 
   - script: |
-      npx artillery run quickLoadTest.yml --output report.json --output report.html
+      npx artillery run quickLoadTest.yml --output report.json
     displayName: 'Run Artillery + Playwright Load Test'
 
   - task: PublishBuildArtifacts@1
