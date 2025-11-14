@@ -20,7 +20,7 @@ steps:
     displayName: 'Install dependencies'
 
   - script: |
-      npm run test:load
+      npm run load
     displayName: 'Run Artillery + Playwright Load Test'
 
   - task: PublishBuildArtifacts@1
